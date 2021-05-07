@@ -12,6 +12,9 @@ const ArticlesGrid = styled.section`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  @media (max-width: 375px) {
+    margin-top: 1.5rem;
+  }
 `;
 
 export async function getStaticProps() {

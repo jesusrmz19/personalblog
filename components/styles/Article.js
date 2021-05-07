@@ -89,6 +89,20 @@ const Article = styled.article`
     display: block;
     word-wrap: break-word;
   }
+  @media (max-width: 375px) {
+    h1 {
+      width: 90%;
+    }
+    .article--img {
+      height: 200px;
+    }
+    .article--post {
+      padding: 0 1.8rem;
+    }
+    .article--return {
+      margin-left: 1.8rem;
+    }
+  }
 `;
 
 export default Article;

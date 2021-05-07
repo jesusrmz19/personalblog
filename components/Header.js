@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import styled from 'styled-components';
+import Menu from './Menu';
 
 const HeaderStyles = styled.header`
   .innerheader {
@@ -50,15 +52,50 @@ const HeaderStyles = styled.header`
     transform: translateY(2px);
     width: 2rem;
   }
+  .header--btn {
+    display: none;
+  }
+  .menu {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: all 300ms ease;
+  }
+  .menu.active {
+    transform: translateY(0);
+    height: auto;
+  }
+  @media (max-width: 375px) {
+    .innerheader {
+      padding: 0 2rem;
+    }
+    .socials {
+      display: none;
+    }
+    .header--btn {
+      display: block;
+    }
+  }
 `;
 
 export default function Header() {
+  const [isActive, setActive] = useState(false);
+  const toggleClass = () => {
+    setActive(!isActive);
+    console.log('active');
+  };
   return (
     <HeaderStyles>
+      {/* <div className={isActive ? 'menu active' : 'menu'}>
+        <Menu></Menu>
+      </div> */}
       <div className="innerheader">
         <div className="signature--container">
           <img src="/signature_no_bg.png" alt="Signature Logo"></img>
         </div>
+        <button className="btn header--btn" onClick={toggleClass}>
+          BTN
+        </button>
         <ul className="socials">
           <li className="socials--item portfolio">
             <a
