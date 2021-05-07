@@ -3,8 +3,6 @@ import { getAllPostIds, getPostData } from '../../lib/posts';
 import Date from '../../components/date';
 import Page from '../../components/Page';
 import Article from '../../components/styles/Article';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import Head from 'next/head';
 
 export default function Post({ postData }) {
@@ -28,7 +26,7 @@ export default function Post({ postData }) {
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         />
         <button className="article--return">
-          <FontAwesomeIcon icon={faArrowLeft} />
+          <img src="/arrow.png"></img>
           <Link href="/">Go Back</Link>
         </button>
       </Article>

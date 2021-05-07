@@ -66,6 +66,10 @@ const Article = styled.article`
   .article--return:hover {
     transform: translateX(-5px);
   }
+  .article--return img {
+    width: 1.2rem;
+    transform: rotate(180deg);
+  }
   .article--return a {
     margin-left: 1.2rem;
   }

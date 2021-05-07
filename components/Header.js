@@ -1,10 +1,4 @@
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faInstagram,
-  faTwitter,
-  faLinkedinIn,
-} from '@fortawesome/free-brands-svg-icons';
 
 const HeaderStyles = styled.header`
   .innerheader {
@@ -65,7 +59,7 @@ export default function Header() {
               rel="noopener"
               className="socials--link"
             >
-              <FontAwesomeIcon icon={faInstagram} />
+              Instagram
             </a>
           </li>
           <li className="socials--item">
@@ -75,7 +69,7 @@ export default function Header() {
               rel="noopener"
               className="socials--link"
             >
-              <FontAwesomeIcon icon={faTwitter} />
+              Twitter
             </a>
           </li>
           <li className="socials--item">
@@ -85,7 +79,7 @@ export default function Header() {
               rel="noopener"
               className="socials--link"
             >
-              <FontAwesomeIcon icon={faLinkedinIn} />
+              LinkedIn
             </a>
           </li>
         </ul>
