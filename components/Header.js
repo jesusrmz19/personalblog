@@ -31,6 +31,24 @@ const HeaderStyles = styled.header`
   .socials--link {
     display: inline-block;
     font-size: 2rem;
+    position: relative;
+  }
+  .socials--link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    transition: width ease 300ms;
+  }
+  .socials--link:hover::after {
+    width: 100%;
+  }
+  .socials--link img {
+    transform: translateY(2px);
+    width: 2rem;
   }
 `;
 
@@ -59,7 +77,7 @@ export default function Header() {
               rel="noopener"
               className="socials--link"
             >
-              Instagram
+              <img src="/ig.png"></img>
             </a>
           </li>
           <li className="socials--item">
@@ -69,7 +87,7 @@ export default function Header() {
               rel="noopener"
               className="socials--link"
             >
-              Twitter
+              <img src="/twitter.png"></img>
             </a>
           </li>
           <li className="socials--item">
@@ -79,7 +97,7 @@ export default function Header() {
               rel="noopener"
               className="socials--link"
             >
-              LinkedIn
+              <img src="/linkedin.png"></img>
             </a>
           </li>
         </ul>
