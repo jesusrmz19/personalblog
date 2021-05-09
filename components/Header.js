@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import Menu from './Menu';
+import { device } from '../lib/breakpoints';
 
 const HeaderStyles = styled.header`
   .innerheader {
@@ -10,6 +11,7 @@ const HeaderStyles = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 2rem;
   }
   .signature--container {
     height: 100px;
@@ -57,18 +59,22 @@ const HeaderStyles = styled.header`
   }
   .menu {
     display: block;
+    visibility: 0;
+    opacity: 0;
     width: 100%;
-    height: auto;
-    transition: all 300ms ease;
+    height: 0px;
+    transition: height 300ms ease;
   }
   .menu.active {
-    transform: translateY(0);
-    height: auto;
+    height: 195px;
   }
-  @media (max-width: 375px) {
-    .innerheader {
-      padding: 0 2rem;
-    }
+  .menu.visible {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 300ms;
+    transition: all 200ms ease;
+  }
+  @media ${device.mobileL} {
     .socials {
       display: none;
     }
@@ -86,9 +92,9 @@ export default function Header() {
   };
   return (
     <HeaderStyles>
-      {/* <div className={isActive ? 'menu active' : 'menu'}>
+      <div className={isActive ? 'menu active visible' : 'menu'}>
         <Menu></Menu>
-      </div> */}
+      </div>
       <div className="innerheader">
         <div className="signature--container">
           <img src="/signature_no_bg.png" alt="Signature Logo"></img>

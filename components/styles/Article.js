@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../lib/breakpoints';
 
 const Article = styled.article`
   max-width: 800px;
@@ -22,6 +23,7 @@ const Article = styled.article`
   }
   .article--img {
     width: 100%;
+    padding: 0 1.8rem;
     height: 400px;
     overflow: hidden;
     margin: 0 auto;
@@ -36,6 +38,7 @@ const Article = styled.article`
     max-width: 100%;
     margin: 2.5rem auto;
     line-height: 2;
+    padding: 0 1.8rem;
   }
   .article--post h2 {
     margin-top: 1.5rem;
@@ -55,6 +58,8 @@ const Article = styled.article`
   }
   .article--return {
     margin-bottom: 1.5rem;
+
+    margin-left: 1.8rem;
     background-color: #f36d33;
     border: none;
     outline: none;
@@ -89,18 +94,12 @@ const Article = styled.article`
     display: block;
     word-wrap: break-word;
   }
-  @media (max-width: 375px) {
+  @media ${device.mobileL} {
     h1 {
       width: 90%;
     }
     .article--img {
       height: 200px;
-    }
-    .article--post {
-      padding: 0 1.8rem;
-    }
-    .article--return {
-      margin-left: 1.8rem;
     }
   }
 `;
