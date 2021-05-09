@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import Menu from './Menu';
 import { device } from '../lib/breakpoints';
+import { Button } from './styles/Button';
 
 const HeaderStyles = styled.header`
   .innerheader {
+    position: relative;
     max-width: 1200px;
     margin: 0 auto;
-    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,27 +59,39 @@ const HeaderStyles = styled.header`
   }
   .menu {
     display: block;
-    visibility: 0;
-    opacity: 0;
     width: 100%;
-    height: 0px;
-    transition: height 300ms ease;
+    height: auto;
+    transition: all 300ms ease;
   }
-  .menu.active {
+  .menu.active:first-child {
+    border: solid 1px red;
     height: 195px;
-  }
-  .menu.visible {
-    visibility: visible;
     opacity: 1;
-    transition-delay: 300ms;
-    transition: all 200ms ease;
+    visibility: visible;
   }
   @media ${device.mobileL} {
-    .socials {
-      display: none;
+    .innerheader {
+      flex-wrap: wrap;
     }
-    .header--btn {
-      display: block;
+    nav {
+      visibility: hidden;
+      height: 0;
+      position: relative;
+      width: 100%;
+      transition: height ease 200ms;
+    }
+    nav.active {
+      visibility: visible;
+      height: auto;
+      position: relative;
+    }
+    .socials {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .portfolio {
+      border: none;
     }
   }
 `;
@@ -88,62 +100,61 @@ export default function Header() {
   const [isActive, setActive] = useState(false);
   const toggleClass = () => {
     setActive(!isActive);
-    console.log('active');
   };
   return (
     <HeaderStyles>
-      <div className={isActive ? 'menu active visible' : 'menu'}>
-        <Menu></Menu>
-      </div>
       <div className="innerheader">
         <div className="signature--container">
           <img src="/signature_no_bg.png" alt="Signature Logo"></img>
         </div>
-        <button className="btn header--btn" onClick={toggleClass}>
-          BTN
-        </button>
-        <ul className="socials">
-          <li className="socials--item portfolio">
-            <a
-              href="https://jesusrmz.com/"
-              target="_blank"
-              rel="noopener"
-              className="socials--link"
-            >
-              Portfolio
-            </a>
-          </li>
-          <li className="socials--item">
-            <a
-              href="https://www.instagram.com/jesusrmz_/"
-              target="_blank"
-              rel="noopener"
-              className="socials--link"
-            >
-              <img src="/ig.png"></img>
-            </a>
-          </li>
-          <li className="socials--item">
-            <a
-              href="https://twitter.com/jesusrmz_"
-              target="_blank"
-              rel="noopener"
-              className="socials--link"
-            >
-              <img src="/twitter.png"></img>
-            </a>
-          </li>
-          <li className="socials--item">
-            <a
-              href="https://www.linkedin.com/in/jesusrmz/"
-              target="_blank"
-              rel="noopener"
-              className="socials--link"
-            >
-              <img src="/linkedin.png"></img>
-            </a>
-          </li>
-        </ul>
+        <Button
+          onClick={toggleClass}
+          className={isActive ? 'active' : 'null'}
+        ></Button>
+        <nav className={isActive ? 'active' : 'null'}>
+          <ul className="socials">
+            <li className="socials--item portfolio">
+              <a
+                href="https://jesusrmz.com/"
+                target="_blank"
+                rel="noopener"
+                className="socials--link"
+              >
+                Portfolio
+              </a>
+            </li>
+            <li className="socials--item">
+              <a
+                href="https://www.instagram.com/jesusrmz_/"
+                target="_blank"
+                rel="noopener"
+                className="socials--link"
+              >
+                <img src="/ig.png"></img>
+              </a>
+            </li>
+            <li className="socials--item">
+              <a
+                href="https://twitter.com/jesusrmz_"
+                target="_blank"
+                rel="noopener"
+                className="socials--link"
+              >
+                <img src="/twitter.png"></img>
+              </a>
+            </li>
+            <li className="socials--item">
+              <a
+                href="https://www.linkedin.com/in/jesusrmz/"
+                target="_blank"
+                rel="noopener"
+                className="socials--link"
+              >
+                <img src="/linkedin.png"></img>
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </HeaderStyles>
   );
