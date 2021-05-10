@@ -42,6 +42,8 @@ const GlobalStyles = createGlobalStyle`
         font-size: 1.5rem;
         background-color: var(--offWhite);
         color: var(--black);
+        position: relative;
+        min-height: 100vh;
     }
     h1, h2, h3, p, ul, li {
         margin: 0;
@@ -72,6 +74,7 @@ export default function Page({ children }) {
       <GlobalStyles />
       <Header></Header>
       <InnerPage>{children}</InnerPage>
+      <Footer></Footer>
     </>
   );
 }

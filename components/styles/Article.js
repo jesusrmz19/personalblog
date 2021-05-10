@@ -57,8 +57,7 @@ const Article = styled.article`
     padding: 0.2em 0.4em;
   }
   .article--return {
-    margin-bottom: 1.5rem;
-
+    margin-bottom: 2rem;
     margin-left: 1.8rem;
     background-color: #f36d33;
     border: none;
