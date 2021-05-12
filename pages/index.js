@@ -7,7 +7,7 @@ import Page from '../components/Page';
 import Card from '../components/styles/Card';
 
 const ArticlesGrid = styled.section`
-  margin-top: 4rem;
+  margin: 4rem auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
