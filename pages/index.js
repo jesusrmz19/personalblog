@@ -30,6 +30,30 @@ export default function Home({ allPostsData }) {
   return (
     <Page>
       <Head>
+        <meta name="twitter:title" content="Blog | Jesus" />
+        <meta
+          name="twitter:description"
+          content="This is my personal Blog site where I will share about my journey in web developemnt and life."
+        />
+        <meta
+          name="twitter:image"
+          content="https://blog.jesusrmz.com/img/profile.png"
+        />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="https://blog.jesusrmz.com/" />
+        <meta property="og:title" content="Blog | Jesus" />
+        <meta
+          property="og:description"
+          content="This is my personal Blog site where I will share about my journey in web developemnt and life."
+        />
+        <meta
+          property="og:image"
+          content="https://blog.jesusrmz.com/img/profile.png"
+        />
+        <meta
+          name="description"
+          content="This is my personal Blog site where I will share about my journey in web developemnt and life."
+        />
         <title>Blog | Jesus</title>
         <meta name="description" content="Blog post page" />
         <link rel="icon" href="/favicon.ico" />
