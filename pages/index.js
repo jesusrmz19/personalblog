@@ -56,7 +56,7 @@ export default function Home({ allPostsData }) {
         />
         <title>Blog | Jesus</title>
         <meta name="description" content="Blog post page" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/signature_no_bg.png" />
       </Head>
       <main>
         <ArticlesGrid>
