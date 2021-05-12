@@ -33,7 +33,7 @@ export default function Home({ allPostsData }) {
         <meta name="twitter:title" content="Blog | Jesus" />
         <meta
           name="twitter:description"
-          content="This is my personal Blog site where I will share about my journey in web developemnt and life."
+          content="This is my personal blog site where you will find about my journey learning web developemnt, personal opinions, and my life in general."
         />
         <meta
           name="twitter:image"
@@ -44,7 +44,7 @@ export default function Home({ allPostsData }) {
         <meta property="og:title" content="Blog | Jesus" />
         <meta
           property="og:description"
-          content="This is my personal Blog site where I will share about my journey in web developemnt and life."
+          content="This is my personal blog site where you will find about my journey learning web developemnt, personal opinions, and my life in general."
         />
         <meta
           property="og:image"
@@ -52,7 +52,7 @@ export default function Home({ allPostsData }) {
         />
         <meta
           name="description"
-          content="This is my personal Blog site where I will share about my journey in web developemnt and life."
+          content="This is my personal blog site where you will find about my journey learning web developemnt, personal opinions, and my life in general."
         />
         <title>Blog | Jesus</title>
         <meta name="description" content="Blog post page" />
