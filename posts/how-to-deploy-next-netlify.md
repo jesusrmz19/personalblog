@@ -23,6 +23,6 @@ In the next page you could select the team, branch or even change the build comm
 <img src="/img/deploy-3.png" style="width:100%; margin-top: 10px;" >
 <br><br>
 
-And that's it! By default, Netlify will create a random domain for you to access your site but you can always change it in the Site Settings once the deploy is finished. You could also add your own domain to the site you just deployed. For example, I already had my personal site hosted on Netlify, so I only had to add a subdomain from it and Netlify made the verification for
+And that's it! By default, Netlify will create a random domain for you to access your site but you can always change it in the Site Settings once the deploy is finished. You could also add your own domain to the site you just deployed. For example, I already had my personal site hosted on Netlify, so I only had to add a subdomain from it and Netlify made the verification for it.
 
 <img src="/img/deploy-4.png" style="width:100%; margin-top: 10px;" >
