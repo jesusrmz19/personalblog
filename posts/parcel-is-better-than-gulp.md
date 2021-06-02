@@ -82,9 +82,7 @@ It did the same thing I was doing with Gulp, except for the images "optimization
 
 ## So how do you use Parcel?
 
-I normally install Parcel in all my local projects. After the npm init and getting my package.json file you go to the CLI and write: `npm install parcel --save-dev`.
-
-The only thing that remains after this is creating your scripts to run and build your project. So go ahead and add the scripts below to your package.json:
+I normally install Parcel in all my local projects. After the npm init and getting my package.json file you go to the CLI and write: `npm install parcel --save-dev`. The only thing that remains after this is creating your scripts to run and build your project. So go ahead and add the scripts below to your package.json:
 
 ```
 "scripts": {
@@ -93,6 +91,7 @@ The only thing that remains after this is creating your scripts to run and build
 }
 ```
 
-Now Parcel should be up and running, you can even add SCSS to it if you want to, I do it all the time as I prefer the SCSS approach to projects but hey, it's up to you at the end.
+Now Parcel should be up and running, you can even add SCSS to it if you want to, I do it all the time as I prefer the SCSS approach to projects but hey, it's up to you.
+<br><br>
 
 In the end, if you already use Gulp or Parcel, that's great too. I would like to know how are you using them, what kind of tasks are you delegating Gulp? could be fun to know, as I only did simple things but I'm sure that's just the surface of the tool.
