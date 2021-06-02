@@ -6,7 +6,6 @@ const FooterStyles = styled.footer`
   justify-content: center;
   background-color: var(--black);
   width: 100%;
-  position: absolute;
   top: 100%;
   left: 0;
   p {

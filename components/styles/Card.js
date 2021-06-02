@@ -14,7 +14,7 @@ const Card = styled.article`
   border-radius: var(--borderradius);
   --padding: 1.8rem;
   transition: transform 200ms ease;
-  margin: 1.2rem;
+  margin: 2rem 1.2rem 1.2rem 1.2rem;
   .card--title {
     margin-top: 1.5rem;
     margin-left: 1.5rem;
