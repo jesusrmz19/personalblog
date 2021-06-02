@@ -65,6 +65,7 @@ const GlobalStyles = createGlobalStyle`
 
 const InnerPage = styled.div`
   max-width: 1200px;
+  max-width: calc((280px + 24px) * 3);
   margin: 0 auto;
 `;
 

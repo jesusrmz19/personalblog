@@ -5,15 +5,19 @@ import styled from 'styled-components';
 import Date from '../components/date';
 import Page from '../components/Page';
 import Card from '../components/styles/Card';
+import { device } from '../lib/breakpoints';
 
 const ArticlesGrid = styled.section`
   margin: 4rem auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  @media (max-width: 375px) {
+  @media ${device.mobileM} {
     margin-top: 1.5rem;
+  }
+  @media ${device.laptop} {
+    justify-content: center;
   }
 `;
 
