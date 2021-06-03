@@ -65,6 +65,7 @@ const HeaderStyles = styled.header`
     transition: all 300ms ease;
   }
   .darkmode {
+    width: auto;
     list-style-type: none;
     padding: 0.5em 0.8em;
     position: relative;
