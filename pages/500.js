@@ -9,11 +9,11 @@ const NotFound = styledyled.div`
   align-items: center;
 `;
 
-export default function Custom404() {
+export default function Custom500() {
   return (
     <Page>
       <NotFound>
-        <h1>404 - Blog not found</h1>
+        <h1>500 - Blog not found</h1>
       </NotFound>
     </Page>
   );
