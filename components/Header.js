@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import { device } from '../lib/breakpoints';
+import DarkModeBtn from './DarkModeBtn';
 import { Button } from './styles/Button';
 
 const HeaderStyles = styled.header`
@@ -62,6 +63,11 @@ const HeaderStyles = styled.header`
     width: 100%;
     height: auto;
     transition: all 300ms ease;
+  }
+  .darkmode {
+    list-style-type: none;
+    padding: 0.5em 0.8em;
+    position: relative;
   }
   .menu.active:first-child {
     border: solid 1px red;
@@ -152,6 +158,9 @@ export default function Header() {
               >
                 <img src="/linkedin.png"></img>
               </a>
+            </li>
+            <li className="darkmode">
+              <DarkModeBtn></DarkModeBtn>
             </li>
           </ul>
         </nav>
