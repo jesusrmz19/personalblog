@@ -42,6 +42,7 @@ const Article = styled.article`
   }
   .article--post h2 {
     margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
     color: var(--realblack);
   }
   .article--post a {
@@ -57,6 +58,7 @@ const Article = styled.article`
     padding: 0.2em 0.4em;
   }
   .article--return {
+    margin-top: 1.5rem;
     margin-bottom: 2rem;
     margin-left: 1.8rem;
     background-color: #f36d33;
