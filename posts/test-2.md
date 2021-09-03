@@ -1,7 +1,7 @@
 ---
 title: Test 2
 description: This is the second test entering data in the CMS
-date: 2021-09-09T21:51:51.721Z
+date: '2021-09-03'
 ---
 
 # Test number 2
